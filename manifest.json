@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "darken",
+  "description": "darken your page",
+  "version": "1.0",
+  "author": "Sam",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./scripts/static_inject.js"],
+      "css": ["./scripts/inject_css.css"]
+    }
+  ],
+  "action": {
+    "default_title": "turn to dark page",
+    "default_popup": "./popup/popup.html"
+  },
+  "icons": {
+    "16": "./images/icon.png",
+    "32": "./images/icon.png",
+    "48": "./images/icon.png",
+    "64": "./images/icon.png",
+    "128": "./images/icon.png"
+  },
+  "host_permissions": ["https://*/*"],
+  "permissions": ["scripting", "webNavigation", "storage", "tabs"]
+}

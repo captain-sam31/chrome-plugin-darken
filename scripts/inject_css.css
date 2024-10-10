@@ -1,0 +1,10 @@
+.magic_dark,
+.magic_dark * {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.magic_dark input::placeholder,
+.magic_dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
